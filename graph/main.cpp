@@ -18,9 +18,19 @@ template <typename T> T gcd(T a, T b) {if (b == 0)return a; else return gcd(b, a
 template <typename T> inline T lcm(T a, T b) {return a /gcd(a, b)*b;}
 const ll INF = 1LL << 60;
 const ld PI = 3.14159265358979323846L;
-#include "dsu.cpp"
+#include "dsu.hpp"
 void solve(){
-  
+  int N,Q;cin>>N>>Q;
+  dsu uf(N);
+  rep(i,Q){
+    int t,a,b;cin>>t>>a>>b;
+    if(t==0){
+      uf.merge(a,b);
+    }else{
+      if(uf.same(a,b))cout<<"Yes"<<endl;
+      else cout<<"No"<<endl;
+    }
+  }
 }
 int main(){
   fast_io();
