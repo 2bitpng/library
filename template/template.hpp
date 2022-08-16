@@ -2,6 +2,7 @@
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 #define all(x) (x).begin(),(x).end()
 #define fix(x) fixed << setprecision(x)
+constexpr char nl='\n';
 #define eb emplace_back
 using namespace std;
 using ll = long long;
